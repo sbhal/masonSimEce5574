@@ -27,5 +27,6 @@
 	<classpathentry kind="lib" path="war/WEB-INF/lib/jsr107cache-1.1.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/jta-1.1.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/py4j-0.10.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/gson-2.6.2.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

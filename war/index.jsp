@@ -37,7 +37,7 @@ Stop the simulation:<br>
   <input name="StopSim" value="Stop" type="submit">
 </form>
 <br>
-<form action="simulationece5574vt" method="get">
+<form action="log.jsp" method="get">
 View the simulation logs:<br>
   <input name="ViewLogs" value="View" type="submit">
 </form>
@@ -45,8 +45,6 @@ View the simulation logs:<br>
 <br>
 <br>
 </center>
-
-<a href="upload.html">Upload_file_sid</a>
 
 </body>
 </html>

@@ -64,7 +64,7 @@ public class Simulationece5574vtServlet extends HttpServlet {
 	}
 	
 	}
-	private BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService();
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
@@ -72,18 +72,6 @@ public class Simulationece5574vtServlet extends HttpServlet {
 		
 		System.out.println("Uploaded the simulation Config file");
 		
-        Map<String, List<BlobKey>> blobs = blobstoreService.getUploads(req);
-        List<BlobKey> blobKeys = blobs.get("myFile");
-        
-        Configuration config = Configuration.getInstance();
-        config.load(blobKeys.get(0));
-
-        if (blobKeys == null || blobKeys.isEmpty()) {
-            resp.sendRedirect("/");
-        } else {
-            //res.sendRedirect("/serve?blob-key=" + blobKeys.get(0).getKeyString());
-        	resp.sendRedirect("/index.jsp");
-        }
 
         resp.setContentType("text/plain");
 		resp.getWriter().println("Simulation config file uploaded");

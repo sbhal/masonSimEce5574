@@ -6,6 +6,8 @@ import java.io.FileNotFoundException;
 import com.google.appengine.api.blobstore.BlobKey;
 import com.google.appengine.api.blobstore.BlobstoreInputStream;
 
+import edu.vt.ece5574.gae.log;
+
 //Maybe we shouldn't do json or XML?  There's a java properties file format
 //that might be of interest: 
 //http://cs.gmu.edu/~eclab/projects/mason/extensions/webtutorial1/#param-file
@@ -35,19 +37,19 @@ public class Configuration {
 
 	protected Configuration(){
 		// Exists only to defeat instantiation.
-		String filename = "config.properties";
-		if(!load(filename)) {
-			System.err.println("Failed to load configuration file named " + filename);
-			//System.exit(-1);
-		}
+//		String filename = "config.properties";
+//		if(!load(filename)) {
+//			System.err.println("Failed to load configuration file named " + filename);
+//			System.exit(-1);
+//		}
 	}
 	
 	public Configuration(String filename){
-
-		if(!load(filename)) {
-			System.err.println("Failed to load configuration file named " + filename);
-			//System.exit(-1);
-		}
+//
+//		if(!load(filename)) {
+//			System.err.println("Failed to load configuration file named " + filename);
+//			System.exit(-1);
+//		}
 	}
 	public static Configuration getInstance() {
 		if(instance == null) {
@@ -58,6 +60,8 @@ public class Configuration {
 	
 	public boolean load(BlobKey blobKey) {
 		System.err.println("Inside my func");
+		for(int i=0; i!= 15; ++i)
+			log.updateEvent("user", "1", i+5, i-5);
 		try {
 			allProp = new Properties();
 			in = new BlobstoreInputStream(blobKey);

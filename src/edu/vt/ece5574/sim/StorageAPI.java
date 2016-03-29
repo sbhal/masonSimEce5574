@@ -16,6 +16,7 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.json.JSONObject;
+import edu.vt.ece5574.gae.log;
 
 
 public class StorageAPI {
@@ -99,6 +100,7 @@ public class StorageAPI {
 	
 	public boolean updRobotPos ( String robotID , int xpos , int ypos ) 
 	{
+		log.updateEvent("robot", robotID, xpos, ypos);
 		try 
 		{
 			JSONObject json = new JSONObject();
@@ -124,6 +126,7 @@ public class StorageAPI {
 	
 	public boolean updUserPos ( String userID , int xpos , int ypos ) 
 	{
+		log.updateEvent("user", userID, xpos, ypos);
 		try 
 		{
 			JSONObject json = new JSONObject();
