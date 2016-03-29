@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>Simulationece5574vt</servlet-name>
+		<servlet-class>edu.vt.ece5574.gae.Simulationece5574vtServlet</servlet-class>
+	</servlet>
+	<servlet>
+    	<servlet-name>UploadServlet</servlet-name>
+    	<servlet-class>edu.vt.ece5574.gae.UploadServlet</servlet-class>
+  	</servlet>
+	<servlet-mapping>
+		<servlet-name>UploadServlet</servlet-name>
+		<url-pattern>/UploadServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Simulationece5574vt</servlet-name>
+		<url-pattern>/simulationece5574vt</url-pattern>
+	</servlet-mapping>
+  	<servlet>
+    	<servlet-name>Upload</servlet-name>
+    	<servlet-class>edu.vt.ece5574.gae.Upload</servlet-class>
+  	</servlet>
+  
+  	<servlet>
+    	<servlet-name>Serve</servlet-name>
+    	<servlet-class>edu.vt.ece5574.gae.Serve</servlet-class>
+  	</servlet>
+ 
+  	<servlet-mapping>
+    	<servlet-name>Upload</servlet-name>
+    	<url-pattern>/upload</url-pattern>
+  	</servlet-mapping>
+
+  	<servlet-mapping>
+    	<servlet-name>Serve</servlet-name>
+    	<url-pattern>/serve</url-pattern>
+  	</servlet-mapping>	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+<context-param> 
+    <description>Location to store uploaded file</description> 
+    <param-name>file-upload</param-name> 
+    <param-value>
+         c:\apache-tomcat-5.5.29\webapps\data\
+     </param-value> 
+</context-param>
+</web-app>
